@@ -1,4 +1,4 @@
-package homework.dz1;
+package homework.dz2;
 
 public class Illness {
     public String illnessName;

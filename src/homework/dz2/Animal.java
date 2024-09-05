@@ -1,9 +1,9 @@
-package homework.dz1;
+package homework.dz2;
 
 import java.time.LocalDate;
 
-public class Animal {
-    private String name;
+public abstract class Animal {
+    protected String name;
     private Illness illness;
     private String ownerName;
     private LocalDate birthday;
@@ -22,9 +22,7 @@ public class Animal {
     public void setName(String name){
         this.name = name;
     }
-    public String getName() {
-        return name;
-    }
+    public abstract String getName();
 
     public Illness getIllness() {
         return illness;
@@ -45,7 +43,7 @@ public class Animal {
         System.out.println(getClass().getSimpleName() + " plays");
     }
     private void sleep(){
-        System.out.println(getClass().getSimpleName() + " go to bed");
+        System.out.println(getClass().getSimpleName() + " bed");
     }
 
     public void liveCycle(){
@@ -59,4 +57,13 @@ public class Animal {
         System.out.println("breathe");
     }
 
+    @Override
+    public String toString() {
+        return '{'+ getClass().getSimpleName() +
+                " name='" + name + '\'' +
+                ", illness=" + illness +
+                ", ownerName='" + ownerName + '\'' +
+                ", birthday=" + birthday +
+                '}';
+    }
 }
