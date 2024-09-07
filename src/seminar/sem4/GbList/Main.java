@@ -1,5 +1,7 @@
 package seminar.sem4.GbList;
 
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
 //        GbList<String> list = new GbArrayList<>();
@@ -15,5 +17,6 @@ public class Main {
         GbList<Integer> gbList = new GbArrayList<>();
         gbList.add(1).add(2).add(3).add(4);
         System.out.println(gbList);
+
     }
 }
